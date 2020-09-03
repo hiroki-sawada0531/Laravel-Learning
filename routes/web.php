@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('hello/{msg}',function ($msg) {
+
 $html = <<<EOF
 <html>
 <head>
@@ -35,6 +37,6 @@ h1 { font-size:100pt; text-align:right; color:#eee;
 </html>
 EOF;
 
-Route::get('hello',function () use ($html) {
+
     return $html;
 });

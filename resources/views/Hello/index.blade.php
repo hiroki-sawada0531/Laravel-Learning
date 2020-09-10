@@ -9,15 +9,11 @@
 </head>
 <body>
     <h1>Blade/Index</h1>
-    ＠iseet ($msg)
-    <p>こんにちは、{{$msg}}さん。</P>
-    @endisset
-    <p>何か書いて下さい。</p>
-    @endif
-    <form method="POST" action="/hello">
-        @csrf
-        <input type="text" name="msg">
-        <input type="submit">
-    </form>
+    <p>&#064;foreachディレクティブの例</P>
+    <ol>
+    @foreach($data as $item)
+    <li>{{$item}}
+    @endforeach
+    </ol>
 </body>
 </html>

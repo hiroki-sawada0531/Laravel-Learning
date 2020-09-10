@@ -9,9 +9,9 @@
 </head>
 <body>
     <h1>Blade/Index</h1>
-    ＠if ($msg != '')
+    ＠iseet ($msg)
     <p>こんにちは、{{$msg}}さん。</P>
-    @else
+    @endisset
     <p>何か書いて下さい。</p>
     @endif
     <form method="POST" action="/hello">

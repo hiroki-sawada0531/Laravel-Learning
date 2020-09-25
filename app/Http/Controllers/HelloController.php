@@ -12,7 +12,7 @@ class HelloController extends Controller
 
     public function index(Request $request)
         {
-            $items = DB::table('people')->get();
+            $items = DB::table('people')->orderBy('age', 'asc')->get();
             return view('hello.index', ['items' => $items]);
         }
 
@@ -80,7 +80,7 @@ class HelloController extends Controller
         $max = $request->max;
         $items = DB::table('people')
             ->whereRaw('age >= ? and age <= ?',
-              [$min, $max])->get();
+            [$min, $max])->get();
         return view('hello.show', ['items' => $items]);
     }
 }

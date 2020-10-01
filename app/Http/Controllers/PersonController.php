@@ -33,7 +33,7 @@ class PersonController extends Controller
         return view('person.add');
     }
 
-    public function create(Requeat $request)
+    public function create(Request $request)
     {
         $this->validate($request, Person::$rules);
         $person = new Person;

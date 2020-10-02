@@ -1,4 +1,4 @@
-@extends('layout.helloapp')
+@extends('layouts.helloapp')
 
 @section('title', 'Person.Edit')
 

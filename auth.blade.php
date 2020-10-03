@@ -10,7 +10,7 @@
 @section('content')
 <p>{{$message}}</p>
     <form action="/hello/auth" method="post">
-    <table>
+      <table>
         @csrf
         <tr><th>mail: </th><td><input type="text"
             name="email"></td></tr>
@@ -18,7 +18,7 @@
             name="password"></td></tr>
         <tr><th></th><td><input type="submit"
             name="send"></td></tr>
-    </table>
+      </table>
     </form>
 @endsection
 

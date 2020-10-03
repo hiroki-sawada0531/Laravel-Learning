@@ -7,6 +7,7 @@ use App\Http\Requests\HelloRequest;
 use Validator;
 use Illuminate\Support\Facades\DB;
 use App\Person;
+use Illuminate\Support\Facades\Auth;
 
 class HelloController extends Controller
 {

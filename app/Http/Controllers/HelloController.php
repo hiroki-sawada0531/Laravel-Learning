@@ -17,7 +17,7 @@ class HelloController extends Controller
             $user = Auth::user();
             $sort = $request->sort;
             $items = Person::orderBy($sort, 'asc')
-                ->Paginate(5);
+                ->simplePaginate(5);
             $param = ['items' =>$items, 'sort' => $sort, 'user' => $user];
             return view('hello.index', $param);
         }

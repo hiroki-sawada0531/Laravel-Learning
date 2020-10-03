@@ -1,6 +1,9 @@
 @extends('layouts.helloapp')
-
-@section('title', 'Person.index')
+<style>
+    .pagination { font-size:10pt; }
+    .pagination li { display:inline-block }
+</style>
+@section('title', 'Index')
 
 @section('menubar')
     @parent
@@ -18,7 +21,10 @@
         </tr>
     @endforeach
     </table>
+    {{ $items->links() }}
 @endsection
+
+
 @section('footer')
 copyright 2020 tuyano.
 @endsection

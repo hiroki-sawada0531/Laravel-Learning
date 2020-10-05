@@ -22,7 +22,7 @@
         </tr>
         <tr>
           <th></th>
-          <td><input type="submit" name="send"></td>
+          <td><input type="submit" value="send"></td>
         </tr>
       </table>
     </form>

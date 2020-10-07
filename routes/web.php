@@ -48,5 +48,6 @@ Route::post('hello/session', 'HelloController@ses_put');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('hello', 'HelloController@index')->middleware('auth');
 Route::get('hello/auth', 'HelloController@getAuth');
 Route::post('hello/auth', 'HelloController@postAuth');

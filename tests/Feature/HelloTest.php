@@ -2,9 +2,12 @@
 
 namespace Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
-use App\User;
+use Illuminate\Foundation\Testing\WithoutMiddleware;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
+
+
 
 class HelloTest extends TestCase
 {
@@ -29,4 +32,3 @@ class HelloTest extends TestCase
         $response->assertStatus(404);
     }
 }
-
